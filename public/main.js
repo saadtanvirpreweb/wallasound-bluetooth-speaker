@@ -565,8 +565,68 @@ $(document).ready(function () {
   updateSlide(currentIndex);
   startAutoplay();
 
+function setRandomDatesToElements() {
+  // Get all elements with the class "testimonial-date-grid"
+  const dateElements = document.querySelectorAll('.testimonial-date-grid');
+  const elementCount = dateElements.length;
 
+  // Validate that we have either 3 or 6 elements
+  if (elementCount !== 3 && elementCount !== 6) {
+    if (elementCount === 0) {
+      console.error('No elements found with class "testimonial-date-grid"');
+      return;
+    }
+    return;
+  }
 
+  const currentDate = new Date();
+  const endDate = new Date(currentDate);
+  endDate.setDate(currentDate.getDate() - 7); // 7 days from today
+
+  // Calculate the start date, which is 30 days before the end date
+  const startDate = new Date(endDate);
+  startDate.setDate(endDate.getDate() - 30); // 30 days before the end date
+
+  const dates = [];
+  const usedDates = new Set();
+
+  // Generate random dates based on the number of elements found
+  while (dates.length < elementCount) {
+    // Generate a random timestamp between startDate and endDate
+    const randomTimestamp = Math.floor(Math.random() * (endDate.getTime() - startDate.getTime() + 1)) + startDate.getTime();
+    const randomDate = new Date(randomTimestamp);
+
+    // Create a date string to check for duplicates
+    const dateKey = randomDate.toISOString().split('T')[0];
+
+    // Only add if we haven't used this date before
+    if (!usedDates.has(dateKey)) {
+      usedDates.add(dateKey);
+      dates.push(randomDate);
+    }
+  }
+
+  // Sort dates chronologically (oldest to newest)
+  dates.sort((a, b) => a - b);
+
+  // Format dates and assign to elements
+  dates.forEach((date, index) => {
+    const formattedDate = date.toLocaleDateString('en-US', {
+      year: 'numeric',
+      month: 'long',
+      day: '2-digit'
+    });
+
+    // Set the formatted date to the element
+    dateElements[index].textContent = formattedDate;
+  });
+
+  return dates.map(date => date.toLocaleDateString('en-US', {
+    year: 'numeric',
+    month: 'long',
+    day: '2-digit'
+  }));
+}
 
 
 

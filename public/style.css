@@ -413,6 +413,9 @@
   .min-h-\[480px\] {
     min-height: 480px;
   }
+  .min-h-\[500px\] {
+    min-height: 500px;
+  }
   .w-1\/2 {
     width: calc(1/2 * 100%);
   }
@@ -644,11 +647,11 @@
   .border-primary-dark {
     border-color: #0F1420;
   }
-  .border-text-dark {
-    border-color: #0F172A;
-  }
-  .border-b-red-900 {
-    border-bottom-color: var(--color-red-900);
+  .border-b-white\/30 {
+    border-bottom-color: color-mix(in srgb, #fff 30%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      border-bottom-color: color-mix(in oklab, var(--color-white) 30%, transparent);
+    }
   }
   .bg-amber-1 {
     background-color: #FEF3C7;
@@ -681,9 +684,6 @@
     background-color: #B91C1C;
   }
   .bg-slate-9 {
-    background-color: #0F172A;
-  }
-  .bg-text-dark {
     background-color: #0F172A;
   }
   .bg-white {
@@ -827,6 +827,10 @@
     --tw-leading: calc(var(--spacing) * 5.5);
     line-height: calc(var(--spacing) * 5.5);
   }
+  .leading-7 {
+    --tw-leading: calc(var(--spacing) * 7);
+    line-height: calc(var(--spacing) * 7);
+  }
   .font-bold {
     --tw-font-weight: var(--font-weight-bold);
     font-weight: var(--font-weight-bold);
@@ -907,9 +911,6 @@
   }
   .text-primary-dark {
     color: #0F1420;
-  }
-  .text-primary-orange {
-    color: #431407;
   }
   .text-red-500 {
     color: var(--color-red-500);
@@ -1184,6 +1185,11 @@
       min-height: 420px;
     }
   }
+  .md\:min-h-\[500px\] {
+    @media (width >= 48rem) {
+      min-height: 500px;
+    }
+  }
   .md\:w-1\/2 {
     @media (width >= 48rem) {
       width: calc(1/2 * 100%);
@@ -1257,6 +1263,31 @@
   .md\:grid-cols-\[50\%_40\%\] {
     @media (width >= 48rem) {
       grid-template-columns: 50% 40%;
+    }
+  }
+  .md\:grid-cols-\[50\%_44\%\] {
+    @media (width >= 48rem) {
+      grid-template-columns: 50% 44%;
+    }
+  }
+  .md\:grid-cols-\[55\%_40\%\] {
+    @media (width >= 48rem) {
+      grid-template-columns: 55% 40%;
+    }
+  }
+  .md\:grid-cols-\[56\%_40\%\] {
+    @media (width >= 48rem) {
+      grid-template-columns: 56% 40%;
+    }
+  }
+  .md\:grid-cols-\[58\%_40\%\] {
+    @media (width >= 48rem) {
+      grid-template-columns: 58% 40%;
+    }
+  }
+  .md\:grid-cols-\[60\%_36\%\] {
+    @media (width >= 48rem) {
+      grid-template-columns: 60% 36%;
     }
   }
   .md\:flex-row {
@@ -1642,9 +1673,24 @@
       height: 500px;
     }
   }
+  .\32 xl\:min-h-\[500px\] {
+    @media (width >= 96rem) {
+      min-height: 500px;
+    }
+  }
   .\32 xl\:gap-20 {
     @media (width >= 96rem) {
       gap: calc(var(--spacing) * 20);
+    }
+  }
+  .\32 xl\:gap-26 {
+    @media (width >= 96rem) {
+      gap: calc(var(--spacing) * 26);
+    }
+  }
+  .\32 xl\:gap-28 {
+    @media (width >= 96rem) {
+      gap: calc(var(--spacing) * 28);
     }
   }
   .\32 xl\:px-20 {
