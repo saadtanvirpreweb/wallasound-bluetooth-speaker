@@ -642,9 +642,6 @@
   .border-gray-200 {
     border-color: var(--color-gray-200);
   }
-  .border-primary-blue {
-    border-color: #F87171;
-  }
   .border-primary-dark {
     border-color: #0F172A;
   }
@@ -683,9 +680,6 @@
   }
   .bg-red-7 {
     background-color: #B91C1C;
-  }
-  .bg-red-100 {
-    background-color: var(--color-red-100);
   }
   .bg-slate-9 {
     background-color: #0F172A;
@@ -907,9 +901,6 @@
   }
   .text-primary-amber {
     color: #451A03;
-  }
-  .text-primary-blue {
-    color: #F87171;
   }
   .text-primary-dark {
     color: #0F172A;
