@@ -76,7 +76,7 @@ $(document).ready(function () {
   function updateAfflinksLinksOutbound() {
     const urlParams = new URLSearchParams(window.location.search);
     const sub2Value = urlParams.get("sub2") || "";
-    const baseUrl = "https://offer.wallasound.com/earbuds/intl/v1/checkout?oidsm=133&affidsm=39&package=1&uid=2115&oid=572&affid=16&sub2={clickid}";
+    const baseUrl = "https://offer.wallasound.com/speaker/en/us/v6/checkout?uid=377&oidsm=79&affidsm=39&uid=1541&oid=239&affid=16&sub2={clickid}";
     const updatedUrl = baseUrl.replace("{clickid}", sub2Value);
 
     $(".aff-link").each(function() {

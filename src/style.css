@@ -7,7 +7,7 @@
   --breakpoint-mobile: 414px;
   --hero-before-height: 30px;
   --color-star-ratings: #F59E0B;
-  --color-primary-dark: #0F172A;
+  --color-primary-dark: #0F1420;
   --color-primary-blue: #F87171;
   --color-primary-blue-rgb: 56, 189, 248; 
   --color-blue-light: #E0F7FF;
@@ -348,7 +348,7 @@ mux-player {
     width: 100%;
     height: 2px;
     border-radius: 9999px;
-    background-color: var(--color-primary-amber);
+    background-color: var(--color-primary-dark);
   }
   
   .feature-line-circle {
@@ -356,7 +356,7 @@ mux-player {
     height: 1.5rem;
     border-radius: 9999px;
     background-color: white;
-    border: 2px solid var(--color-primary-amber);
+    border: 2px solid var(--color-primary-dark);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -368,7 +368,7 @@ mux-player {
     height: 1rem;
     background-color: var(--color-red-7);
     border-radius: 9999px;
-    border: 2px solid var(--color-primary-amber);
+    border: 2px solid var(--color-primary-dark);
     flex-shrink: 0;
   }
 }

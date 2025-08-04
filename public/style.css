@@ -7,7 +7,6 @@
       "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
-    --color-red-100: oklch(93.6% 0.032 17.717);
     --color-red-500: oklch(63.7% 0.237 25.331);
     --color-red-900: oklch(39.6% 0.141 25.723);
     --color-amber-50: oklch(98.7% 0.022 95.277);
@@ -60,6 +59,7 @@
     --font-weight-bold: 700;
     --font-weight-extrabold: 800;
     --tracking-wide: 0.025em;
+    --tracking-wider: 0.05em;
     --tracking-widest: 0.1em;
     --radius-2xl: 1rem;
     --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
@@ -71,14 +71,13 @@
     --radius: .625rem;
     --hero-before-height: 30px;
     --color-star-ratings: #F59E0B;
-    --color-primary-dark: #0F172A;
+    --color-primary-dark: #0F1420;
     --color-primary-blue: #F87171;
     --color-primary-blue-rgb: 56, 189, 248;
     --color-banner-bg: #B91C1C;
     --color-banner-text: #FFF;
     --color-banner-svg: #FFF;
     --color-yellow-1: #FDC700;
-    --color-primary-amber: #451A03;
     --color-red-7: #B91C1C;
   }
 }
@@ -643,7 +642,7 @@
     border-color: var(--color-gray-200);
   }
   .border-primary-dark {
-    border-color: #0F172A;
+    border-color: #0F1420;
   }
   .border-text-dark {
     border-color: #0F172A;
@@ -676,7 +675,7 @@
     background-color: #FFEDD5;
   }
   .bg-primary-dark {
-    background-color: #0F172A;
+    background-color: #0F1420;
   }
   .bg-red-7 {
     background-color: #B91C1C;
@@ -856,6 +855,10 @@
     --tw-tracking: var(--tracking-wide);
     letter-spacing: var(--tracking-wide);
   }
+  .tracking-wider {
+    --tw-tracking: var(--tracking-wider);
+    letter-spacing: var(--tracking-wider);
+  }
   .tracking-widest {
     --tw-tracking: var(--tracking-widest);
     letter-spacing: var(--tracking-widest);
@@ -903,7 +906,7 @@
     color: #451A03;
   }
   .text-primary-dark {
-    color: #0F172A;
+    color: #0F1420;
   }
   .text-primary-orange {
     color: #431407;
@@ -1040,16 +1043,16 @@
       border-radius: calc(var(--radius) + 4px);
     }
   }
+  .before\:bg-amber-5 {
+    &::before {
+      content: var(--tw-content);
+      background-color: #F59E0B;
+    }
+  }
   .before\:bg-primary-dark {
     &::before {
       content: var(--tw-content);
-      background-color: #0F172A;
-    }
-  }
-  .before\:bg-red-7 {
-    &::before {
-      content: var(--tw-content);
-      background-color: #B91C1C;
+      background-color: #0F1420;
     }
   }
   .before\:content-\[\'\'\] {
@@ -1594,12 +1597,6 @@
       line-height: var(--tw-leading, var(--text-5xl--line-height));
     }
   }
-  .lg\:text-base {
-    @media (width >= 64rem) {
-      font-size: var(--text-base);
-      line-height: var(--tw-leading, var(--text-base--line-height));
-    }
-  }
   .lg\:text-lg {
     @media (width >= 64rem) {
       font-size: var(--text-lg);
@@ -1906,14 +1903,14 @@ mux-player {
     width: 100%;
     height: 2px;
     border-radius: 9999px;
-    background-color: var(--color-primary-amber);
+    background-color: var(--color-primary-dark);
   }
   .feature-line-circle {
     width: 1.5rem;
     height: 1.5rem;
     border-radius: 9999px;
     background-color: white;
-    border: 2px solid var(--color-primary-amber);
+    border: 2px solid var(--color-primary-dark);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1924,7 +1921,7 @@ mux-player {
     height: 1rem;
     background-color: var(--color-red-7);
     border-radius: 9999px;
-    border: 2px solid var(--color-primary-amber);
+    border: 2px solid var(--color-primary-dark);
     flex-shrink: 0;
   }
 }
