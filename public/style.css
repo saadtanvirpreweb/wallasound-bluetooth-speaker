@@ -8,7 +8,6 @@
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
     --color-red-500: oklch(63.7% 0.237 25.331);
-    --color-red-900: oklch(39.6% 0.141 25.723);
     --color-amber-50: oklch(98.7% 0.022 95.277);
     --color-emerald-500: oklch(69.6% 0.17 162.48);
     --color-gray-100: oklch(96.7% 0.003 264.542);
@@ -245,9 +244,6 @@
   .-bottom-full {
     bottom: -100%;
   }
-  .bottom-0 {
-    bottom: calc(var(--spacing) * 0);
-  }
   .left-0 {
     left: calc(var(--spacing) * 0);
   }
@@ -409,9 +405,6 @@
   }
   .min-h-102 {
     min-height: calc(var(--spacing) * 102);
-  }
-  .min-h-\[480px\] {
-    min-height: 480px;
   }
   .min-h-\[500px\] {
     min-height: 500px;
@@ -1180,11 +1173,6 @@
       min-height: calc(var(--spacing) * 96);
     }
   }
-  .md\:min-h-\[420px\] {
-    @media (width >= 48rem) {
-      min-height: 420px;
-    }
-  }
   .md\:min-h-\[500px\] {
     @media (width >= 48rem) {
       min-height: 500px;
@@ -1213,6 +1201,16 @@
   .md\:w-44 {
     @media (width >= 48rem) {
       width: calc(var(--spacing) * 44);
+    }
+  }
+  .md\:w-\[36\%\] {
+    @media (width >= 48rem) {
+      width: 36%;
+    }
+  }
+  .md\:w-\[60\%\] {
+    @media (width >= 48rem) {
+      width: 60%;
     }
   }
   .md\:max-w-3xl {
@@ -1258,31 +1256,6 @@
   .md\:grid-cols-\[45\%_45\%\] {
     @media (width >= 48rem) {
       grid-template-columns: 45% 45%;
-    }
-  }
-  .md\:grid-cols-\[50\%_40\%\] {
-    @media (width >= 48rem) {
-      grid-template-columns: 50% 40%;
-    }
-  }
-  .md\:grid-cols-\[50\%_44\%\] {
-    @media (width >= 48rem) {
-      grid-template-columns: 50% 44%;
-    }
-  }
-  .md\:grid-cols-\[55\%_40\%\] {
-    @media (width >= 48rem) {
-      grid-template-columns: 55% 40%;
-    }
-  }
-  .md\:grid-cols-\[56\%_40\%\] {
-    @media (width >= 48rem) {
-      grid-template-columns: 56% 40%;
-    }
-  }
-  .md\:grid-cols-\[58\%_40\%\] {
-    @media (width >= 48rem) {
-      grid-template-columns: 58% 40%;
     }
   }
   .md\:grid-cols-\[60\%_36\%\] {
@@ -1668,24 +1641,9 @@
       line-height: var(--tw-leading, var(--text-6xl--line-height));
     }
   }
-  .\32 xl\:h-\[500px\] {
-    @media (width >= 96rem) {
-      height: 500px;
-    }
-  }
   .\32 xl\:min-h-\[500px\] {
     @media (width >= 96rem) {
       min-height: 500px;
-    }
-  }
-  .\32 xl\:gap-20 {
-    @media (width >= 96rem) {
-      gap: calc(var(--spacing) * 20);
-    }
-  }
-  .\32 xl\:gap-26 {
-    @media (width >= 96rem) {
-      gap: calc(var(--spacing) * 26);
     }
   }
   .\32 xl\:gap-28 {
