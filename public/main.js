@@ -259,7 +259,7 @@ $(document).ready(function () {
     // Adjust speed based on screen width
     const updateSpeed = function () {
       const width = $(window).width();
-      const speed = width < 768 ? "30s" : "40s";
+      const speed = width < 768 ? "70s" : "40s";
 
       // Check if element exists
       if ($(".marquee-content").length) {
@@ -581,7 +581,7 @@ function setRandomDatesToElements() {
 
   const currentDate = new Date();
   const endDate = new Date(currentDate);
-  endDate.setDate(currentDate.getDate() - 7); // 7 days from today
+  endDate.setDate(currentDate.getDate() + 7); // 7 days from today
 
   // Calculate the start date, which is 30 days before the end date
   const startDate = new Date(endDate);
