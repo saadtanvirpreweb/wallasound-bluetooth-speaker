@@ -73,9 +73,9 @@
     --color-primary-dark: #0F1420;
     --color-primary-blue: #F87171;
     --color-primary-blue-rgb: 56, 189, 248;
-    --color-banner-bg: #B91C1C;
-    --color-banner-text: #FFF;
-    --color-banner-svg: #FFF;
+    --color-banner-bg: #ACF4A1;
+    --color-banner-text: #000;
+    --color-banner-svg: #000;
     --color-yellow-1: #FDC700;
     --color-red-7: #B91C1C;
   }
@@ -1256,11 +1256,6 @@
   .md\:grid-cols-\[45\%_45\%\] {
     @media (width >= 48rem) {
       grid-template-columns: 45% 45%;
-    }
-  }
-  .md\:grid-cols-\[60\%_36\%\] {
-    @media (width >= 48rem) {
-      grid-template-columns: 60% 36%;
     }
   }
   .md\:flex-row {
